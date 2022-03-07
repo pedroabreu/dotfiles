@@ -15,6 +15,15 @@ if test ! $(which brew); then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
@@ -25,28 +34,6 @@ brew update
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle --file $DOTFILES/Brewfile
-
-# Set default MySQL root password and auth type
-mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
-
-# Install PHP extensions with PECL
-pecl install imagick redis swoole
-
-# Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/valet beyondcode/expose
-
-# Install Laravel Valet
-$HOME/.composer/vendor/bin/valet install
-
-# Create a Sites directory
-mkdir $HOME/Sites
-
-# Create sites subdirectories
-mkdir $HOME/Sites/blade-ui-kit
-mkdir $HOME/Sites/laravel
-
-# Clone Github repositories
-$DOTFILES/clone.sh
 
 # Symlink the Mackup config file to the home directory
 ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
