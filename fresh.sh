@@ -15,15 +15,6 @@ if test ! $(which brew); then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# clone
-git clone https://github.com/powerline/fonts.git --depth=1
-# install
-cd fonts
-./install.sh
-# clean-up a bit
-cd ..
-rm -rf fonts
-
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
