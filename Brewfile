@@ -40,7 +40,7 @@ cask 'google-chrome'
 cask 'the-unarchiver'
 cask 'visual-studio-code'
 cask 'zoom'
-cask 'teams'
+cask 'microsoft-teams'
 
 # Fonts
 cask 'font-lato'
