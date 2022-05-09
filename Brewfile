@@ -31,6 +31,7 @@ brew 'gifsicle'
 brew 'nginx'
 brew 'nvm'
 brew 'yarn'
+brew 'iterm2'
 
 # Apps
 cask 'docker'
