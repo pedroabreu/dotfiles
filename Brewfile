@@ -40,6 +40,8 @@ cask 'figma'
 #cask 'google-chrome'
 cask 'the-unarchiver'
 cask 'visual-studio-code'
+cask 'notion'
+cask 'iterm2'
 #cask 'zoom'
 #cask 'microsoft-teams'
 
