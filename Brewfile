@@ -35,12 +35,12 @@ brew 'yarn'
 # Apps
 cask 'docker'
 cask 'figma'
-cask 'firefox'
-cask 'google-chrome'
+#cask 'firefox'
+#cask 'google-chrome'
 cask 'the-unarchiver'
 cask 'visual-studio-code'
-cask 'zoom'
-cask 'microsoft-teams'
+#cask 'zoom'
+#cask 'microsoft-teams'
 
 # Fonts
 cask 'font-lato'
