@@ -31,7 +31,7 @@ brew 'gifsicle'
 brew 'nginx'
 brew 'nvm'
 brew 'yarn'
-brew 'iterm2'
+brew 'nvm'
 
 # Apps
 cask 'docker'
@@ -42,6 +42,8 @@ cask 'the-unarchiver'
 cask 'visual-studio-code'
 cask 'notion'
 cask 'iterm2'
+cask 'spotify'
+cask 'adobe-acrobat-reader'
 #cask 'zoom'
 #cask 'microsoft-teams'
 
